@@ -20,7 +20,7 @@ services:
    nproc: 65535
    nofile:
     soft: 20000
-    hard: 40000
+    hard: 40000 
    mem_limit: 512m
   env_file:
    - .env_db_pgsql
@@ -28,7 +28,7 @@ services:
   user: root
   networks:
    static-network: 
-     ipv4_address: 172.16.238.3
+     ipv4_address: 172.16.238.2
    zbx_net:
     aliases:
      - zabbix-server
@@ -62,7 +62,7 @@ services:
   user: root
   networks:
    static-network: 
-     ipv4_address: 172.16.238.4
+     ipv4_address: 172.16.238.3
    zbx_net:
     aliases:
      - zabbix-web-nginx-pgsql
@@ -86,7 +86,7 @@ services:
   user: root
   networks:
    static-network: 
-     ipv4_address: 172.16.238.2
+     ipv4_address: 172.16.238.4
    zbx_net:
     aliases:
      - postgres-server
